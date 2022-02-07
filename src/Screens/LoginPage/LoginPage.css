@@ -1,0 +1,12 @@
+.bottom {
+    height: calc( 100vh - 40px);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.SideImage {
+    width: calc(200% / 3);
+    background-image: url("../../../assets/image.png");
+    background-position: center;
+}
