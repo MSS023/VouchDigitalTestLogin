@@ -1,12 +1,27 @@
+import { useState } from "react";
+import loginService from "../../services/axios-services";
 import Button from "../Button/Button";
+import { message } from "antd";
 import "./LoginForm.css";
 
 function LoginForm(props) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function handleLogin() {
+    try {
+      const response = await loginService(email, password);
+      message.success("Login Successful token=" + response.data.token);
+    } catch (err) {
+      message.error("Login unsuccessful");
+    }
+  }
+
   return (
     <div className="LoginForm">
       <h1 className="Heading">Welcome Back</h1>
       <h2 className="SubHeading">Sub-title text goes here</h2>
-      <form className="row form">
+      <div className="row form">
         <div className="col-12 formElement">
           <div className="input-group">
             <input
@@ -16,6 +31,10 @@ function LoginForm(props) {
               placeholder="Email Address *"
               aria-describedby="inputGroupPrepend2"
               required
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
             />
           </div>
         </div>
@@ -24,22 +43,30 @@ function LoginForm(props) {
             <input
               type="password"
               className="form-control"
-              id="validationDefaultUsername"
+              id="validationDefaultPassword"
               placeholder="Password *"
               aria-describedby="inputGroupPrepend2"
               required
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
             />
           </div>
         </div>
         <div className="col-12 formElement">
-          <Button className="login form-control">Login</Button>
+          <Button className="login form-control" onClick={handleLogin}>
+            Login
+          </Button>
         </div>
-      </form>
+      </div>
       <div className="subform">
         <div className="checkbox contain">
           <input id="remPass" type="checkbox" className="check" />
           <span className="checkmark" />
-          <label for="remPass" className="checkLabel">Remember Password</label>
+          <label for="remPass" className="checkLabel">
+            Remember Password
+          </label>
         </div>
         <div className="forgotContainer">
           <a href="/" className="forgot">

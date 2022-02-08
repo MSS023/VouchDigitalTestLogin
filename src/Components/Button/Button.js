@@ -2,7 +2,7 @@ import "./Button.css";
 
 function Button(props) {
   return (
-    <button className={"btn button "+props.className} style={{ backgroundColor: props.color }}>
+    <button {...props} className={"btn button "+props.className} style={{ backgroundColor: props.color }}>
       {props.children}
     </button>
   );
