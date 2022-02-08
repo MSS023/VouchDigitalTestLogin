@@ -3,13 +3,19 @@ import Navbar from "../../Components/Navbar/Navbar";
 import "./LoginPage.css";
 
 function LoginPage(props) {
-    return <div className="Login">
-        <Navbar />
-        <section className="bottom">
-            <LoginForm />
-            <div className="SideImage" />
-        </section>
-    </div>;
+  return (
+    <div className="Login">
+      <Navbar />
+      <section className="bottom">
+        <div className="Left">
+          <LoginForm />
+        </div>
+        <div className="Right">
+          <div className="SideImage" />
+        </div>
+      </section>
+    </div>
+  );
 }
 
 export default LoginPage;

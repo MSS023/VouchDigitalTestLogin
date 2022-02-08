@@ -4,14 +4,14 @@ import "./Navbar.css";
 function Navbar(props) {
   return (
     <div className="Navbar">
-      <nav className="navbar navbar-light bg-light">
+      <nav className="navbar navbar-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            ATools.
+            ATools<span>.</span>
           </a>
           <div className="navbarButtons">
-            <Button>Start Free Trial</Button>
-            <Button>Login</Button>
+            <Button className="buttonNav navbarStart">Start Free Trial</Button>
+            <Button className="buttonNav navbarLogin">Login</Button>
           </div>
         </div>
       </nav>
