@@ -105,6 +105,8 @@
     line-height: 20px;
     color: #757a7e;
     cursor: pointer;
+    font-size: 0.75rem;
+    width: auto;
 }
 
 .form {
@@ -124,4 +126,11 @@
     height: 20px;
     text-decoration: none;
     color: #757a7e;
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 768px) {
+  .LoginForm {
+    margin: 0 20px;
+  }
 }

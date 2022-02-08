@@ -6,14 +6,9 @@
 }
 
 .Left {
-  width: 510px;
   justify-content: center;
   align-items: center;
   margin: auto;
-}
-
-.Right {
-  width: calc(100% - 510px);
 }
 
 .SideImage {
