@@ -1,7 +1,7 @@
 import env from "react-dotenv";
 import axios from "axios";
 
-const url=env.URL;
+const url="https://reqres.in/api/login";
 
 async function loginService(username, password) {
   try {
