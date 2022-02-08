@@ -6,7 +6,7 @@ function Navbar(props) {
     <div className="Navbar">
       <nav className="navbar navbar-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             ATools<span>.</span>
           </a>
           <div className="navbarButtons">

@@ -42,7 +42,7 @@ function LoginForm(props) {
           <label for="remPass" className="checkLabel">Remember Password</label>
         </div>
         <div className="forgotContainer">
-          <a href="#" className="forgot">
+          <a href="/" className="forgot">
             Forgot Password?
           </a>
         </div>
