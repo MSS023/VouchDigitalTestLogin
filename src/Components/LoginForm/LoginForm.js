@@ -9,11 +9,23 @@ function LoginForm(props) {
   const [password, setPassword] = useState("");
 
   async function handleLogin() {
+    if(email.length===0){
+      message.error("Please enter email address");
+      return;
+    }
+    if(!String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+      message.error("Enter valid email address");
+      return;
+    }
+    if(password.length === 0) {
+      message.error("Please enter password");
+      return;
+    }
     try {
       const response = await loginService(email, password);
       message.success("Login Successful token=" + response.data.token);
     } catch (err) {
-      message.error("Login unsuccessful");
+      message.error("Incorrect Email or Password");
     }
   }
 
@@ -55,7 +67,7 @@ function LoginForm(props) {
           </div>
         </div>
         <div className="col-12 formElement">
-          <Button className="login form-control" onClick={handleLogin}>
+          <Button className="login form-control btn-dark" onClick={handleLogin}>
             Login
           </Button>
         </div>

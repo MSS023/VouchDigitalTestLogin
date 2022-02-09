@@ -26,7 +26,15 @@
     background-color: #023047;
 }
 
+.navbarStart:focus {
+    background-color: #023047;
+}
+
 .navbarLogin {
+    background-color: #fb8500;
+}
+
+.navbarLogin:focus {
     background-color: #fb8500;
 }
 

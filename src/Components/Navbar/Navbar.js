@@ -10,8 +10,8 @@ function Navbar(props) {
             ATools<span>.</span>
           </a>
           <div className="navbarButtons">
-            <Button className="buttonNav navbarStart">Start Free Trial</Button>
-            <Button className="buttonNav navbarLogin">Login</Button>
+            <Button className="buttonNav navbarStart btn-dark">Start Free Trial</Button>
+            <Button className="buttonNav navbarLogin btn-dark">Login</Button>
           </div>
         </div>
       </nav>
