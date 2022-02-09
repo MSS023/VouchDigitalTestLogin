@@ -32,6 +32,7 @@
 
 .navbarLogin {
     background-color: #fb8500;
+    border: none;
 }
 
 .navbarLogin:focus {
